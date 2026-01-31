@@ -1,0 +1,5 @@
+input,start_time,end_time,species_name,confidence
+"/home/nofed/Code/bird/data/sample.mp3","00:00:00.00","00:00:03.00","Buteo jamaicensis_Red-tailed Hawk",0.996267
+"/home/nofed/Code/bird/data/sample.mp3","00:00:03.00","00:00:06.00","Buteo jamaicensis_Red-tailed Hawk",0.869986
+"/home/nofed/Code/bird/data/sample.mp3","00:00:06.00","00:00:08.03","Buteo jamaicensis_Red-tailed Hawk",0.559917
+"/home/nofed/Code/bird/data/sample.mp3","00:00:06.00","00:00:08.03","Tyto alba_Barn Owl",0.123879
