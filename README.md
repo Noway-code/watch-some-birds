@@ -1,0 +1,1 @@
+Non-commercial project for getting birdnet running with a camera on a local server. Datasets taken directly from macaulay library.

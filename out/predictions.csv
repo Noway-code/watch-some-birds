@@ -1,5 +1,114 @@
 input,start_time,end_time,species_name,confidence
-"/home/nofed/Code/bird/data/sample.mp3","00:00:00.00","00:00:03.00","Buteo jamaicensis_Red-tailed Hawk",0.996267
-"/home/nofed/Code/bird/data/sample.mp3","00:00:03.00","00:00:06.00","Buteo jamaicensis_Red-tailed Hawk",0.869986
-"/home/nofed/Code/bird/data/sample.mp3","00:00:06.00","00:00:08.03","Buteo jamaicensis_Red-tailed Hawk",0.559917
-"/home/nofed/Code/bird/data/sample.mp3","00:00:06.00","00:00:08.03","Tyto alba_Barn Owl",0.123879
+"/home/nofed/Code/bird/data/bald_1.mp3","00:00:00.00","00:00:03.00","Haliaeetus leucocephalus_Bald Eagle",0.959520
+"/home/nofed/Code/bird/data/bald_1.mp3","00:00:03.00","00:00:06.00","Haliaeetus leucocephalus_Bald Eagle",0.963889
+"/home/nofed/Code/bird/data/bald_1.mp3","00:00:06.00","00:00:09.00","Haliaeetus leucocephalus_Bald Eagle",0.291822
+"/home/nofed/Code/bird/data/bald_1.mp3","00:00:09.00","00:00:12.00","Haliaeetus leucocephalus_Bald Eagle",0.980012
+"/home/nofed/Code/bird/data/bald_1.mp3","00:00:12.00","00:00:15.00","Cyanocitta cristata_Blue Jay",0.859644
+"/home/nofed/Code/bird/data/bald_2.mp3","00:00:00.00","00:00:03.00","Haliaeetus leucocephalus_Bald Eagle",0.999860
+"/home/nofed/Code/bird/data/bald_2.mp3","00:00:03.00","00:00:06.00","Haliaeetus leucocephalus_Bald Eagle",0.998524
+"/home/nofed/Code/bird/data/bald_2.mp3","00:00:06.00","00:00:09.00","Haliaeetus leucocephalus_Bald Eagle",0.999927
+"/home/nofed/Code/bird/data/bald_2.mp3","00:00:09.00","00:00:12.00","Haliaeetus leucocephalus_Bald Eagle",0.993482
+"/home/nofed/Code/bird/data/bald_2.mp3","00:00:12.00","00:00:15.00","Turdus migratorius_American Robin",0.177725
+"/home/nofed/Code/bird/data/bald_2.mp3","00:00:15.00","00:00:18.00","Coccothraustes coccothraustes_Hawfinch",0.270957
+"/home/nofed/Code/bird/data/bald_2.mp3","00:00:15.00","00:00:18.00","Anthus petrosus_Rock Pipit",0.119150
+"/home/nofed/Code/bird/data/bald_3.mp3","00:00:06.00","00:00:09.00","Athene cunicularia_Burrowing Owl",0.279889
+"/home/nofed/Code/bird/data/red_tailed_1.mp3","00:00:00.00","00:00:03.00","Buteo jamaicensis_Red-tailed Hawk",0.996267
+"/home/nofed/Code/bird/data/red_tailed_1.mp3","00:00:03.00","00:00:06.00","Buteo jamaicensis_Red-tailed Hawk",0.869986
+"/home/nofed/Code/bird/data/red_tailed_1.mp3","00:00:06.00","00:00:08.03","Buteo jamaicensis_Red-tailed Hawk",0.559917
+"/home/nofed/Code/bird/data/red_tailed_1.mp3","00:00:06.00","00:00:08.03","Tyto alba_Barn Owl",0.123879
+"/home/nofed/Code/bird/data/robin_1.mp3","00:00:00.00","00:00:03.00","Turdus migratorius_American Robin",0.900054
+"/home/nofed/Code/bird/data/robin_1.mp3","00:00:03.00","00:00:06.00","Turdus migratorius_American Robin",0.335216
+"/home/nofed/Code/bird/data/robin_1.mp3","00:00:03.00","00:00:06.00","Herpsilochmus atricapillus_Black-capped Antwren",0.255940
+"/home/nofed/Code/bird/data/robin_1.mp3","00:00:06.00","00:00:09.00","Turdus migratorius_American Robin",0.932518
+"/home/nofed/Code/bird/data/robin_1.mp3","00:00:09.00","00:00:12.00","Turdus migratorius_American Robin",0.940266
+"/home/nofed/Code/bird/data/robin_1.mp3","00:00:15.00","00:00:18.00","Turdus migratorius_American Robin",0.925548
+"/home/nofed/Code/bird/data/robin_1.mp3","00:00:18.00","00:00:21.00","Turdus migratorius_American Robin",0.843181
+"/home/nofed/Code/bird/data/robin_1.mp3","00:00:21.00","00:00:24.00","Turdus migratorius_American Robin",0.902885
+"/home/nofed/Code/bird/data/robin_1.mp3","00:00:24.00","00:00:27.00","Turdus migratorius_American Robin",0.923896
+"/home/nofed/Code/bird/data/robin_1.mp3","00:00:27.00","00:00:30.00","Turdus migratorius_American Robin",0.916851
+"/home/nofed/Code/bird/data/robin_1.mp3","00:00:30.00","00:00:33.00","Turdus migratorius_American Robin",0.959324
+"/home/nofed/Code/bird/data/robin_1.mp3","00:00:33.00","00:00:36.00","Turdus migratorius_American Robin",0.890013
+"/home/nofed/Code/bird/data/robin_2.mp3","00:00:00.00","00:00:03.00","Sturnus vulgaris_European Starling",0.816166
+"/home/nofed/Code/bird/data/robin_2.mp3","00:00:00.00","00:00:03.00","Turdus migratorius_American Robin",0.714761
+"/home/nofed/Code/bird/data/robin_2.mp3","00:00:03.00","00:00:06.00","Turdus iliacus_Redwing",0.162974
+"/home/nofed/Code/bird/data/robin_2.mp3","00:00:03.00","00:00:06.00","Sturnus vulgaris_European Starling",0.131442
+"/home/nofed/Code/bird/data/robin_2.mp3","00:00:06.00","00:00:09.00","Sturnus vulgaris_European Starling",0.239335
+"/home/nofed/Code/bird/data/robin_2.mp3","00:00:09.00","00:00:12.00","Bombycilla cedrorum_Cedar Waxwing",0.161929
+"/home/nofed/Code/bird/data/robin_2.mp3","00:00:12.00","00:00:15.00","Bombycilla cedrorum_Cedar Waxwing",0.545889
+"/home/nofed/Code/bird/data/robin_2.mp3","00:00:12.00","00:00:15.00","Turdus iliacus_Redwing",0.211731
+"/home/nofed/Code/bird/data/robin_2.mp3","00:00:12.00","00:00:15.00","Sturnus vulgaris_European Starling",0.104839
+"/home/nofed/Code/bird/data/robin_2.mp3","00:00:15.00","00:00:18.00","Bombycilla cedrorum_Cedar Waxwing",0.560088
+"/home/nofed/Code/bird/data/robin_2.mp3","00:00:15.00","00:00:18.00","Sturnus vulgaris_European Starling",0.123645
+"/home/nofed/Code/bird/data/robin_2.mp3","00:00:18.00","00:00:21.00","Sturnus vulgaris_European Starling",0.177745
+"/home/nofed/Code/bird/data/robin_2.mp3","00:00:21.00","00:00:24.00","Sturnus vulgaris_European Starling",0.369319
+"/home/nofed/Code/bird/data/robin_2.mp3","00:00:24.00","00:00:27.00","Sturnus vulgaris_European Starling",0.107174
+"/home/nofed/Code/bird/data/robin_2.mp3","00:00:27.00","00:00:30.00","Euphagus carolinus_Rusty Blackbird",0.134567
+"/home/nofed/Code/bird/data/robin_2.mp3","00:00:33.00","00:00:36.00","Sturnus vulgaris_European Starling",0.128260
+"/home/nofed/Code/bird/data/robin_2.mp3","00:00:36.00","00:00:39.00","Sturnus vulgaris_European Starling",0.332137
+"/home/nofed/Code/bird/data/robin_2.mp3","00:00:39.00","00:00:42.00","Sturnus vulgaris_European Starling",0.271313
+"/home/nofed/Code/bird/data/robin_2.mp3","00:00:42.00","00:00:45.00","Sturnus vulgaris_European Starling",0.205893
+"/home/nofed/Code/bird/data/robin_2.mp3","00:00:48.00","00:00:50.06","Turdus iliacus_Redwing",0.461994
+"/home/nofed/Code/bird/data/robin_3.mp3","00:00:00.00","00:00:03.00","Euphagus carolinus_Rusty Blackbird",0.104420
+"/home/nofed/Code/bird/data/robin_3.mp3","00:00:03.00","00:00:06.00","Bombycilla cedrorum_Cedar Waxwing",0.101412
+"/home/nofed/Code/bird/data/robin_3.mp3","00:00:06.00","00:00:09.00","Bombycilla cedrorum_Cedar Waxwing",0.797259
+"/home/nofed/Code/bird/data/robin_3.mp3","00:00:06.00","00:00:09.00","Bombycilla garrulus_Bohemian Waxwing",0.699729
+"/home/nofed/Code/bird/data/robin_3.mp3","00:00:06.00","00:00:09.00","Turdus migratorius_American Robin",0.297464
+"/home/nofed/Code/bird/data/robin_3.mp3","00:00:09.00","00:00:12.00","Poecile rufescens_Chestnut-backed Chickadee",0.218921
+"/home/nofed/Code/bird/data/robin_3.mp3","00:00:09.00","00:00:12.00","Turdus migratorius_American Robin",0.198119
+"/home/nofed/Code/bird/data/robin_3.mp3","00:00:15.00","00:00:14.02","Abroscopus albogularis_Rufous-faced Warbler",0.000000
+"/home/nofed/Code/bird/data/robin_3.mp3","00:00:15.00","00:00:14.02","Abroscopus albogularis_Rufous-faced Warbler",0.000000
+"/home/nofed/Code/bird/data/robin_3.mp3","00:00:15.00","00:00:14.02","Abroscopus albogularis_Rufous-faced Warbler",0.000000
+"/home/nofed/Code/bird/data/robin_3.mp3","00:00:15.00","00:00:14.02","Abroscopus albogularis_Rufous-faced Warbler",0.000000
+"/home/nofed/Code/bird/data/robin_3.mp3","00:00:15.00","00:00:14.02","Abroscopus albogularis_Rufous-faced Warbler",0.000000
+"/home/nofed/Code/bird/data/sparrow_1.mp3","00:00:00.00","00:00:03.00","Passer domesticus_House Sparrow",0.952811
+"/home/nofed/Code/bird/data/sparrow_1.mp3","00:00:00.00","00:00:03.00","Passer italiae_Italian Sparrow",0.112009
+"/home/nofed/Code/bird/data/sparrow_1.mp3","00:00:00.00","00:00:03.00","Passer montanus_Eurasian Tree Sparrow",0.107380
+"/home/nofed/Code/bird/data/sparrow_1.mp3","00:00:03.00","00:00:06.00","Passer domesticus_House Sparrow",0.356630
+"/home/nofed/Code/bird/data/sparrow_1.mp3","00:00:06.00","00:00:09.00","Passer domesticus_House Sparrow",0.264852
+"/home/nofed/Code/bird/data/sparrow_1.mp3","00:00:09.00","00:00:12.00","Passer domesticus_House Sparrow",0.366824
+"/home/nofed/Code/bird/data/sparrow_1.mp3","00:00:12.00","00:00:15.00","Passer domesticus_House Sparrow",0.201690
+"/home/nofed/Code/bird/data/sparrow_2.mp3","00:00:00.00","00:00:03.00","Anas platyrhynchos_Mallard",0.196094
+"/home/nofed/Code/bird/data/sparrow_2.mp3","00:00:00.00","00:00:03.00","Passer domesticus_House Sparrow",0.119861
+"/home/nofed/Code/bird/data/sparrow_2.mp3","00:00:06.00","00:00:04.66","Abroscopus albogularis_Rufous-faced Warbler",0.000000
+"/home/nofed/Code/bird/data/sparrow_2.mp3","00:00:06.00","00:00:04.66","Abroscopus albogularis_Rufous-faced Warbler",0.000000
+"/home/nofed/Code/bird/data/sparrow_2.mp3","00:00:06.00","00:00:04.66","Abroscopus albogularis_Rufous-faced Warbler",0.000000
+"/home/nofed/Code/bird/data/sparrow_2.mp3","00:00:06.00","00:00:04.66","Abroscopus albogularis_Rufous-faced Warbler",0.000000
+"/home/nofed/Code/bird/data/sparrow_2.mp3","00:00:06.00","00:00:04.66","Abroscopus albogularis_Rufous-faced Warbler",0.000000
+"/home/nofed/Code/bird/data/sparrow_2.mp3","00:00:09.00","00:00:04.66","Abroscopus albogularis_Rufous-faced Warbler",0.000000
+"/home/nofed/Code/bird/data/sparrow_2.mp3","00:00:09.00","00:00:04.66","Abroscopus albogularis_Rufous-faced Warbler",0.000000
+"/home/nofed/Code/bird/data/sparrow_2.mp3","00:00:09.00","00:00:04.66","Abroscopus albogularis_Rufous-faced Warbler",0.000000
+"/home/nofed/Code/bird/data/sparrow_2.mp3","00:00:09.00","00:00:04.66","Abroscopus albogularis_Rufous-faced Warbler",0.000000
+"/home/nofed/Code/bird/data/sparrow_2.mp3","00:00:09.00","00:00:04.66","Abroscopus albogularis_Rufous-faced Warbler",0.000000
+"/home/nofed/Code/bird/data/sparrow_2.mp3","00:00:12.00","00:00:04.66","Abroscopus albogularis_Rufous-faced Warbler",0.000000
+"/home/nofed/Code/bird/data/sparrow_2.mp3","00:00:12.00","00:00:04.66","Abroscopus albogularis_Rufous-faced Warbler",0.000000
+"/home/nofed/Code/bird/data/sparrow_2.mp3","00:00:12.00","00:00:04.66","Abroscopus albogularis_Rufous-faced Warbler",0.000000
+"/home/nofed/Code/bird/data/sparrow_2.mp3","00:00:12.00","00:00:04.66","Abroscopus albogularis_Rufous-faced Warbler",0.000000
+"/home/nofed/Code/bird/data/sparrow_2.mp3","00:00:12.00","00:00:04.66","Abroscopus albogularis_Rufous-faced Warbler",0.000000
+"/home/nofed/Code/bird/data/sparrow_2.mp3","00:00:15.00","00:00:04.66","Abroscopus albogularis_Rufous-faced Warbler",0.000000
+"/home/nofed/Code/bird/data/sparrow_2.mp3","00:00:15.00","00:00:04.66","Abroscopus albogularis_Rufous-faced Warbler",0.000000
+"/home/nofed/Code/bird/data/sparrow_2.mp3","00:00:15.00","00:00:04.66","Abroscopus albogularis_Rufous-faced Warbler",0.000000
+"/home/nofed/Code/bird/data/sparrow_2.mp3","00:00:15.00","00:00:04.66","Abroscopus albogularis_Rufous-faced Warbler",0.000000
+"/home/nofed/Code/bird/data/sparrow_2.mp3","00:00:15.00","00:00:04.66","Abroscopus albogularis_Rufous-faced Warbler",0.000000
+"/home/nofed/Code/bird/data/sparrow_3.mp3","00:00:00.00","00:00:03.00","Passer domesticus_House Sparrow",0.268104
+"/home/nofed/Code/bird/data/sparrow_3.mp3","00:00:03.00","00:00:06.00","Gymnoris xanthocollis_Yellow-throated Sparrow",0.151555
+"/home/nofed/Code/bird/data/sparrow_3.mp3","00:00:06.00","00:00:09.00","Passer domesticus_House Sparrow",0.156855
+"/home/nofed/Code/bird/data/sparrow_3.mp3","00:00:06.00","00:00:09.00","Passer griseus_Northern Gray-headed Sparrow",0.154055
+"/home/nofed/Code/bird/data/sparrow_3.mp3","00:00:09.00","00:00:12.00","Passer griseus_Northern Gray-headed Sparrow",0.213633
+"/home/nofed/Code/bird/data/sparrow_3.mp3","00:00:09.00","00:00:12.00","Passer hispaniolensis_Spanish Sparrow",0.188209
+"/home/nofed/Code/bird/data/sparrow_3.mp3","00:00:09.00","00:00:12.00","Passer domesticus_House Sparrow",0.130543
+"/home/nofed/Code/bird/data/sparrow_3.mp3","00:00:12.00","00:00:15.00","Passer griseus_Northern Gray-headed Sparrow",0.825425
+"/home/nofed/Code/bird/data/sparrow_3.mp3","00:00:15.00","00:00:18.00","Passer griseus_Northern Gray-headed Sparrow",0.672875
+"/home/nofed/Code/bird/data/sparrow_3.mp3","00:00:18.00","00:00:21.00","Passer griseus_Northern Gray-headed Sparrow",0.848954
+"/home/nofed/Code/bird/data/sparrow_3.mp3","00:00:21.00","00:00:24.00","Passer hispaniolensis_Spanish Sparrow",0.796726
+"/home/nofed/Code/bird/data/sparrow_3.mp3","00:00:21.00","00:00:24.00","Passer griseus_Northern Gray-headed Sparrow",0.248514
+"/home/nofed/Code/bird/data/sparrow_3.mp3","00:00:21.00","00:00:24.00","Passer domesticus_House Sparrow",0.211114
+"/home/nofed/Code/bird/data/sparrow_3.mp3","00:00:21.00","00:00:24.00","Passer montanus_Eurasian Tree Sparrow",0.111822
+"/home/nofed/Code/bird/data/sparrow_3.mp3","00:00:24.00","00:00:27.00","Passer domesticus_House Sparrow",0.239152
+"/home/nofed/Code/bird/data/sparrow_3.mp3","00:00:24.00","00:00:27.00","Passer hispaniolensis_Spanish Sparrow",0.137909
+"/home/nofed/Code/bird/data/sparrow_3.mp3","00:00:27.00","00:00:30.00","Passer griseus_Northern Gray-headed Sparrow",0.794236
+"/home/nofed/Code/bird/data/sparrow_3.mp3","00:00:30.00","00:00:33.00","Passer griseus_Northern Gray-headed Sparrow",0.627315
+"/home/nofed/Code/bird/data/sparrow_3.mp3","00:00:30.00","00:00:33.00","Passer domesticus_House Sparrow",0.227310
+"/home/nofed/Code/bird/data/sparrow_3.mp3","00:00:33.00","00:00:36.00","Passer hispaniolensis_Spanish Sparrow",0.203010
+"/home/nofed/Code/bird/data/sparrow_3.mp3","00:00:33.00","00:00:36.00","Passer domesticus_House Sparrow",0.158679
+"/home/nofed/Code/bird/data/sparrow_3.mp3","00:00:33.00","00:00:36.00","Passer griseus_Northern Gray-headed Sparrow",0.148909
+"/home/nofed/Code/bird/data/sparrow_3.mp3","00:00:36.00","00:00:38.06","Streptopelia decaocto_Eurasian Collared-Dove",0.133494
