@@ -1,0 +1,163 @@
+species_name,confidence
+Acanthiza chrysorrhoa_Yellow-rumped Thornbill,0.32857605814933777
+Acanthiza lineata_Striated Thornbill,0.2904389202594757
+Acanthiza nana_Yellow Thornbill,0.2588755190372467
+Acanthiza pusilla_Brown Thornbill,0.5437707304954529
+Acanthiza reguloides_Buff-rumped Thornbill,0.1393078863620758
+Acanthorhynchus tenuirostris_Eastern Spinebill,0.4259439706802368
+Accipiter fasciatus_Brown Goshawk,0.04907526075839996
+Acridotheres tristis_Common Myna,0.3900800347328186
+Acrocephalus australis_Australian Reed Warbler,0.1421113908290863
+Ailuroedus crassirostris_Green Catbird,0.030946917831897736
+Alauda arvensis_Eurasian Skylark,0.0342601053416729
+Alectura lathami_Australian Brushturkey,0.04242745414376259
+Alisterus scapularis_Australian King-Parrot,0.3995932340621948
+Anas castanea_Chestnut Teal,0.18043680489063263
+Anas gracilis_Gray Teal,0.26671701669692993
+Anas superciliosa_Pacific Black Duck,0.5260074138641357
+Anhinga novaehollandiae_Australasian Darter,0.11439556628465652
+Anthochaera carunculata_Red Wattlebird,0.7425649166107178
+Anthochaera chrysoptera_Little Wattlebird,0.2679745852947235
+Anthus novaeseelandiae_Australasian Pipit,0.08585741370916367
+Ardea alba_Great Egret,0.14389106631278992
+Ardea intermedia_Intermediate Egret,0.030618229880928993
+Artamus cyanopterus_Dusky Woodswallow,0.12315729260444641
+Artamus leucorynchus_White-breasted Woodswallow,0.06597777456045151
+Biziura lobata_Musk Duck,0.03497239947319031
+Bubulcus ibis_Cattle Egret,0.07602003216743469
+Cacatua galerita_Sulphur-crested Cockatoo,0.6596465706825256
+Cacatua sanguinea_Little Corella,0.19143186509609222
+Cacomantis flabelliformis_Fan-tailed Cuckoo,0.14881864190101624
+Cacomantis variolosus_Brush Cuckoo,0.03885221853852272
+Calidris ruficollis_Red-necked Stint,0.0519351102411747
+Caligavis chrysops_Yellow-faced Honeyeater,0.6555063724517822
+Callocephalon fimbriatum_Gang-gang Cockatoo,0.03784608468413353
+Calyptorhynchus funereus_Yellow-tailed Black-Cockatoo,0.2209285944700241
+Ceyx azureus_Azure Kingfisher,0.03614301607012749
+Chenonetta jubata_Maned Duck,0.5005667209625244
+Chroicocephalus novaehollandiae_Silver Gull,0.2470560073852539
+Chrysococcyx lucidus_Shining Bronze-Cuckoo,0.05513874068856239
+Cincloramphus mathewsi_Rufous Songlark,0.06599604338407516
+Circus approximans_Swamp Harrier,0.041406139731407166
+Cisticola exilis_Golden-headed Cisticola,0.12570016086101532
+Climacteris picumnus_Brown Treecreeper,0.060991860926151276
+Colluricincla harmonica_Gray Shrikethrush,0.4659501016139984
+Columba livia_Rock Pigeon,0.1320163905620575
+Coracina novaehollandiae_Black-faced Cuckooshrike,0.43987956643104553
+Corcorax melanorhamphos_White-winged Chough,0.19887442886829376
+Cormobates leucophaea_White-throated Treecreeper,0.5806781649589539
+Corvus coronoides_Australian Raven,0.8497202396392822
+Corvus mellori_Little Raven,0.1228409856557846
+Corvus orru_Torresian Crow,0.062201570719480515
+Cracticus nigrogularis_Pied Butcherbird,0.22706691920757294
+Cracticus torquatus_Gray Butcherbird,0.40023088455200195
+Cygnus atratus_Black Swan,0.22052399814128876
+Dacelo novaeguineae_Laughing Kookaburra,0.6610008478164673
+Daphoenositta chrysoptera_Varied Sittella,0.060467593371868134
+Dicaeum hirundinaceum_Mistletoebird,0.16155025362968445
+Dicrurus bracteatus_Spangled Drongo,0.04465264454483986
+Edolisoma tenuirostre_Common Cicadabird,0.0444834902882576
+Egretta garzetta_Little Egret,0.06331982463598251
+Egretta novaehollandiae_White-faced Heron,0.45178496837615967
+Elseyornis melanops_Black-fronted Dotterel,0.07524218410253525
+Entomyzon cyanotis_Blue-faced Honeyeater,0.0879000723361969
+Eolophus roseicapilla_Galah,0.727487325668335
+Eopsaltria australis_Eastern Yellow Robin,0.5305319428443909
+Eudynamys orientalis_Pacific Koel,0.20987668633460999
+Eurystomus orientalis_Dollarbird,0.18913474678993225
+Falco berigora_Brown Falcon,0.04791201278567314
+Falcunculus frontatus_Crested Shrike-tit,0.06608255952596664
+Fulica atra_Eurasian Coot,0.30605533719062805
+Gallinago hardwickii_Latham's Snipe,0.036231525242328644
+Gallinula tenebrosa_Dusky Moorhen,0.25838205218315125
+Geopelia humeralis_Bar-shouldered Dove,0.12784314155578613
+Geopelia placida_Peaceful Dove,0.0847807377576828
+Gerygone mouki_Brown Gerygone,0.1732209473848343
+Gerygone olivacea_White-throated Gerygone,0.11755149066448212
+Glossopsitta concinna_Musk Lorikeet,0.15941040217876434
+Grallina cyanoleuca_Magpie-lark,0.8720834851264954
+Gymnorhina tibicen_Australian Magpie,0.9921790361404419
+Haematopus fuliginosus_Sooty Oystercatcher,0.05303269997239113
+Haematopus longirostris_Pied Oystercatcher,0.08433597534894943
+Haliaeetus leucogaster_White-bellied Sea-Eagle,0.1624642014503479
+Haliastur sphenurus_Whistling Kite,0.17096082866191864
+Himantopus leucocephalus_Pied Stilt,0.09297546744346619
+Hirundapus caudacutus_White-throated Needletail,0.0403008759021759
+Hirundo neoxena_Welcome Swallow,0.7366262674331665
+Hydroprogne caspia_Caspian Tern,0.056041114032268524
+Leucosarcia melanoleuca_Wonga Pigeon,0.10651165246963501
+Lichenostomus melanops_Yellow-tufted Honeyeater,0.0767873227596283
+Lichmera indistincta_Brown Honeyeater,0.05185048282146454
+Limosa lapponica_Bar-tailed Godwit,0.03610941022634506
+Macropygia phasianella_Brown Cuckoo-Dove,0.07956112921237946
+Malacorhynchus membranaceus_Pink-eared Duck,0.04361823946237564
+Malurus cyaneus_Superb Fairywren,0.9187585115432739
+Malurus lamberti_Variegated Fairywren,0.1110633909702301
+Manorina melanocephala_Noisy Miner,0.6496370434761047
+Manorina melanophrys_Bell Miner,0.10705939680337906
+Meliphaga lewinii_Lewin's Honeyeater,0.3476099967956543
+Melithreptus brevirostris_Brown-headed Honeyeater,0.08523896336555481
+Melithreptus lunatus_White-naped Honeyeater,0.21492597460746765
+Menura novaehollandiae_Superb Lyrebird,0.14767621457576752
+Merops ornatus_Rainbow Bee-eater,0.11342231184244156
+Microeca fascinans_Jacky-winter,0.11676684021949768
+Monarcha melanopsis_Black-faced Monarch,0.06745562702417374
+Myiagra inquieta_Restless Flycatcher,0.05559547618031502
+Myiagra rubecula_Leaden Flycatcher,0.07991603016853333
+Myzomela sanguinolenta_Scarlet Myzomela,0.12440790981054306
+Neochmia temporalis_Red-browed Firetail,0.4164867103099823
+Nesoptilotis leucotis_White-eared Honeyeater,0.18124991655349731
+Numenius madagascariensis_Far Eastern Curlew,0.05329323932528496
+Ocyphaps lophotes_Crested Pigeon,0.543253481388092
+Oriolus sagittatus_Olive-backed Oriole,0.21324174106121063
+Pachycephala pectoralis_Golden Whistler,0.3576343059539795
+Pachycephala rufiventris_Rufous Whistler,0.3556389808654785
+Pandion haliaetus_Osprey,0.03872156888246536
+Pardalotus punctatus_Spotted Pardalote,0.4313562512397766
+Pardalotus striatus_Striated Pardalote,0.21142010390758514
+Parvipsitta pusilla_Little Lorikeet,0.06827151030302048
+Passer domesticus_House Sparrow,0.2300494909286499
+Pelecanus conspicillatus_Australian Pelican,0.3332151770591736
+Petrochelidon ariel_Fairy Martin,0.0595962330698967
+Petrochelidon nigricans_Tree Martin,0.083573117852211
+Petroica boodang_Scarlet Robin,0.040664561092853546
+Petroica rosea_Rose Robin,0.09132236987352371
+Phalacrocorax carbo_Great Cormorant,0.18039639294147491
+Phaps chalcoptera_Common Bronzewing,0.12120919674634933
+Philemon corniculatus_Noisy Friarbird,0.39384445548057556
+Phylidonyris novaehollandiae_New Holland Honeyeater,0.1640876829624176
+Platycercus elegans_Crimson Rosella,0.571406364440918
+Platycercus eximius_Eastern Rosella,0.5538021922111511
+Plectorhyncha lanceolata_Striped Honeyeater,0.031283821910619736
+Porphyrio melanotus_Australasian Swamphen,0.24237214028835297
+Psephotus haematonotus_Red-rumped Parrot,0.261508047580719
+Psophodes olivaceus_Eastern Whipbird,0.3847486972808838
+Ptilonorhynchus violaceus_Satin Bowerbird,0.32244759798049927
+Ptilotula fusca_Fuscous Honeyeater,0.0961039811372757
+Ptilotula penicillata_White-plumed Honeyeater,0.21722853183746338
+Pycnonotus jocosus_Red-whiskered Bulbul,0.030272405594587326
+Pyrrholaemus sagittatus_Speckled Warbler,0.09232691675424576
+Rhipidura albiscapa_Gray Fantail,0.6761510372161865
+Rhipidura leucophrys_Willie-wagtail,0.8796639442443848
+Rhipidura rufifrons_Rufous Fantail,0.08358673751354218
+Scythrops novaehollandiae_Channel-billed Cuckoo,0.0666770488023758
+Sericornis citreogularis_Yellow-throated Scrubwren,0.034293726086616516
+Sericornis frontalis_White-browed Scrubwren,0.4748955965042114
+Sericornis magnirostra_Large-billed Scrubwren,0.03608229383826256
+Smicrornis brevirostris_Weebill,0.1291518658399582
+Sphecotheres vieilloti_Australasian Figbird,0.11439630389213562
+Stizoptera bichenovii_Double-barred Finch,0.07650560885667801
+Strepera graculina_Pied Currawong,0.8731225728988647
+Streptopelia chinensis_Spotted Dove,0.18547531962394714
+Sturnus vulgaris_European Starling,0.4491260349750519
+Synoicus ypsilophorus_Brown Quail,0.032275378704071045
+Tachybaptus novaehollandiae_Australasian Grebe,0.19168639183044434
+Tadorna tadornoides_Australian Shelduck,0.03565149009227753
+Thalasseus bergii_Great Crested Tern,0.18807654082775116
+Threskiornis molucca_Australian Ibis,0.275713175535202
+Todiramphus sanctus_Sacred Kingfisher,0.17165394127368927
+Trichoglossus chlorolepidotus_Scaly-breasted Lorikeet,0.07508880645036697
+Trichoglossus moluccanus_Rainbow Lorikeet,0.5998817682266235
+Turdus merula_Eurasian Blackbird,0.2062326967716217
+Vanellus miles_Masked Lapwing,0.548212468624115
+Zosterops lateralis_Silvereye,0.3636432886123657
