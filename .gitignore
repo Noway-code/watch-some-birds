@@ -1,6 +1,7 @@
 models
+out/
 .idea
 data/30Mins.mp3
 .ipynb_checkpoints
 .venv
-
+.fedoravenv

@@ -1,5 +1,0 @@
-input,start_time,end_time,species_name,confidence
-"/home/nofed/Code/bird/out/attempt.wav","00:00:00.00","00:00:03.00","Buteo jamaicensis_Red-tailed Hawk",0.285897
-"/home/nofed/Code/bird/out/attempt.wav","00:00:00.00","00:00:03.00","Cyanocitta cristata_Blue Jay",0.208829
-"/home/nofed/Code/bird/out/attempt.wav","00:00:06.00","00:00:09.00","Mimus polyglottos_Northern Mockingbird",0.307851
-"/home/nofed/Code/bird/out/attempt.wav","00:00:09.00","00:00:10.00","Mimus gilvus_Tropical Mockingbird",0.102271
