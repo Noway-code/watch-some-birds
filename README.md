@@ -29,3 +29,13 @@ General
 - Ornithology
 - Bioacoustics
 - Learning to develop side projects outside of work
+
+stretch
+--
+next step is the birdnet-pi along side it, might require a seperate device all together . would love for this to join the group of relays across the globe helping ornithologists as a whole keep up the hardwork
+
+shoutout
+--
+there's so many people and orgs to call out here. first and foremost, the entire field of ornithology is a blessing. it's a hidden cornerstone to the understanding of our planet. they provide us with valuable information regarding climate change, biodiversity, urban planning, agriculture and so many more fields and deserve so much more praise (and funding) !
+
+just to list a few, thank you to cornell lab of ornithology, Macaulay library, xeno-canto, audobon society, and so many more. 
