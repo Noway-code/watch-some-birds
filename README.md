@@ -1,7 +1,7 @@
+overview
+---
 Non-commerical personal project to have a bird feeder with a bulit in Raspberry Pi4 camera and object detection. Built with limited LLM usage (as you should for personal projects)
----
-burd 
----
+--
 **Intent**:
     I just really love birdwatching and the area I'm in is great for it. The only problem is I'm never around! 
 
