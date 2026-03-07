@@ -10,23 +10,46 @@ from picamera2.outputs import PyavOutput
 def apply_timestamp(request):
     timestamp = time.strftime("%Y-%m-%d %X")
     with MappedArray(request, "main") as m:
-        cv2.putText(m.array, timestamp, origin, font, scale, colour, thickness)
+        cv2.putText(m.array, timestamp, (0,30),
+                    cv2.FONT_HERSHEY_SIMPLEX, 1,
+                    (0,255,0), 2)
+
+class Camera:
+    def __init__(self, size: tuple, format: str):
+        self.picam2 = Picamera2()
+        self.size = size
+        self.format = format
+        self.config = None
+        self._configure()
+
+    def _configure(self):
+        self.config = self.picam2.create_video_configuration(
+            main={"size": self.size, "format": self.format}
+        )
+        self.picam2.configure(self.config)
+
+    def set_pre_callback(self, fn):
+        self.picam2.pre_callback = fn
+
+    def start(self):
+        self.picam2.start()
+
+    def capture_array(self):
+        return self.picam2.capture_array()
+
+    def stop(self):
+        self.picam2.stop()
+
+    def close(self):
+        self.picam2.close()
+
 
 # Initiatlize and Config the Camera
-picam2 = Picamera2()
-config = picam2.create_video_configuration(
-    main={"size": (1280, 720), "format": "RGB888"}
-)
-picam2.configure(config)
-colour = (0, 255, 0)
-origin = (0, 30)
-font = cv2.FONT_HERSHEY_SIMPLEX
-scale = 1
-thickness = 2
-        
+camera = Camera(size=(1280,720), format="RGB888")
+
 # Immediatly on frame capture, add timestamp
-picam2.pre_callback = apply_timestamp
-picam2.start()
+camera.pre_callback = apply_timestamp
+camera.start()
 
 # Prepare to output video
 fourcc = cv2.VideoWriter_fourcc(*"mp4v")
@@ -34,8 +57,8 @@ out = cv2.VideoWriter("out/output.mp4", fourcc, 20, (1280, 720))
 
 start = perf_counter()
 
-frame1 = picam2.capture_array()
-frame2 = picam2.capture_array()
+frame1 = camera.capture_array()
+frame2 = camera.capture_array()
 while (perf_counter() - start ) < 15:
     # Frame for displaying with grids
     frame_display = frame2.copy()
@@ -60,8 +83,8 @@ while (perf_counter() - start ) < 15:
 
     # Prep next loop
     frame1 = frame2
-    frame2 = picam2.capture_array()
+    frame2 = camera.capture_array()
 
 out.release()
-picam2.stop()
-picam2.close()
+camera.stop()
+camera.close()
