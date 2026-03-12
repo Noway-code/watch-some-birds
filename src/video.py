@@ -15,16 +15,19 @@ def apply_timestamp(request):
                     (0,255,0), 2)
 
 class Camera:
-    def __init__(self, main_size: tuple, format: str):
+    def __init__(self, main_size: tuple, main_format: str, lores_size: tuple, lores_format: str):
         self.picam2 = Picamera2()
         self.main_size = main_size
-        self.format = format
+        self.main_format = main_format
+        self.lores_size = lores_size
+        self.lores_format = lores_format
         self.config = None
         self._configure()
 
     def _configure(self):
         self.config = self.picam2.create_video_configuration(
-            main={"size": self.main_size, "format": self.format}
+            main={"size": self.main_size, "format": self.main_format},
+            lores="size": self.lores_size, "format": self.lores_format}
         )
         self.picam2.configure(self.config)
 
@@ -45,7 +48,8 @@ class Camera:
 
 
 # Initiatlize and Config the Camera
-camera = Camera(main_size=(1280,720), format="RGB888")
+main_size=(1280,720), main_format="RGB888", lores_size=(640,360), lores_format='RGB888'
+camera = Camera(main_size, main_format, lores_size, lores_format)
 
 # Immediatly on frame capture, add timestamp
 camera.pre_callback = apply_timestamp
