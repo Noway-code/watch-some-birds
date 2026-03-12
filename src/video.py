@@ -27,7 +27,7 @@ class Camera:
     def _configure(self):
         self.config = self.picam2.create_video_configuration(
             main={"size": self.main_size, "format": self.main_format},
-            lores="size": self.lores_size, "format": self.lores_format}
+            lores={"size": self.lores_size, "format": self.lores_format}
         )
         self.picam2.configure(self.config)
 
@@ -48,7 +48,10 @@ class Camera:
 
 
 # Initiatlize and Config the Camera
-main_size=(1280,720), main_format="RGB888", lores_size=(640,360), lores_format='RGB888'
+main_size=(1280,720)
+main_format="RGB888"
+lores_size=(640,360)
+lores_format="YUV420"
 camera = Camera(main_size, main_format, lores_size, lores_format)
 
 # Immediatly on frame capture, add timestamp
