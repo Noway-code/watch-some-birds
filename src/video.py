@@ -25,6 +25,7 @@ class Camera:
         self._configure()
 
     def _configure(self):
+        # Configure main and lores
         self.config = self.picam2.create_video_configuration(
             main={"size": self.main_size, "format": self.main_format},
             lores={"size": self.lores_size, "format": self.lores_format}
@@ -37,8 +38,11 @@ class Camera:
     def start(self):
         self.picam2.start()
 
-    def capture_array(self):
-        return self.picam2.capture_array()
+    def capture_array(self, name="main"):
+        return self.picam2.capture_array(name=name)
+    
+    def start_encoder(self, name='main'):
+        return self.picam2.start_encoder
 
     def stop(self):
         self.picam2.stop()
@@ -52,10 +56,11 @@ main_size=(1280,720)
 main_format="RGB888"
 lores_size=(640,360)
 lores_format="YUV420"
+
 camera = Camera(main_size, main_format, lores_size, lores_format)
 
 # Immediatly on frame capture, add timestamp
-camera.pre_callback = apply_timestamp
+camera.set_pre_callback = apply_timestamp
 camera.start()
 
 # Prepare to output video
@@ -64,33 +69,26 @@ out = cv2.VideoWriter("out/output.mp4", fourcc, 20, (1280, 720))
 
 start = perf_counter()
 
-frame1 = camera.capture_array()
-frame2 = camera.capture_array()
-while (perf_counter() - start ) < 15:
-    # Frame for displaying with grids
-    frame_display = frame2.copy()
+frame1 = camera.capture_array("lores")
+frame1 = frame1[:lores_size[1], :]   # Y channel only
 
-    # Diff and smear color on motion
+while (perf_counter() - start) < 15:
+    frame2 = camera.capture_array("lores")
+    frame2 = frame2[:lores_size[1], :]
+
     diff = cv2.absdiff(frame1, frame2)
-    gray = cv2.cvtColor(diff, cv2.COLOR_BGR2GRAY)
-    blur = cv2.GaussianBlur(gray, (5,5), 0) 
-    _, thresh = cv2.threshold(blur, 50, 255, cv2.THRESH_BINARY)
+    blur = cv2.GaussianBlur(diff, (5,5), 0)
+
+    _, thresh = cv2.threshold(blur, 25, 255, cv2.THRESH_BINARY)
     thresh = cv2.dilate(thresh, None, iterations=2)
-    
-    contours, _ = cv2.findContours(thresh, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
+
+    contours, _ = cv2.findContours(thresh, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
 
     for c in contours:
         if cv2.contourArea(c) > 900:
-            print("Movement detected")
-            # get the bounding box coordinates
-            (x, y, w, h) = cv2.boundingRect(c)
-            cv2.rectangle(frame_display, (x, y), (x+w, y+h), (0, 255, 0), 2)
-    # Add bounded box frame to video output
-    out.write(frame_display)
-
-    # Prep next loop
+            print("motion")
+    out.write(cv2.cvtColor(frame2, cv2.COLOR_YUV420p2RGB))
     frame1 = frame2
-    frame2 = camera.capture_array()
 
 out.release()
 camera.stop()
