@@ -9,11 +9,15 @@ from picamera2.outputs import PyavOutput
 import requests
 import os
 import traceback
+from dotenv import load_dotenv
 
 CLIP_DURATION = 20
 MOTION_AREA_THRESHOLD = 900
+
 OUTPUT_DIR = "out"
-ENDPOINT = "http://localhost:8000/uploadfile/"
+
+load_dotenv()
+ENDPOINT = os.getenv("UPLOAD_ENDPOINT")
 
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
@@ -74,6 +78,7 @@ camera.start()
 frame1 = camera.capture_array("lores")
 frame1 = frame1[: lores_size[1], :]  # Y channel only
 filepath = None
+filename = None
 try:
     while True:
         frame2 = camera.capture_array("lores")
@@ -114,12 +119,17 @@ try:
 
         # RECORDING IN PROGRESS
         if recording:
-            if record_start is None or writer is None or filepath is None:
+            if (
+                record_start is None
+                or writer is None
+                or filename is None
+                or filepath is None
+            ):
                 break
             frame_main = camera.capture_array("main")
-            print(frame_main.shape, frame_main.dtype)
+            # print(frame_main.shape, frame_main.dtype)
             frame_main = cv2.cvtColor(frame_main, cv2.COLOR_RGB2BGR)
-            print(frame_main.shape, frame_main.dtype)
+            # print(frame_main.shape, frame_main.dtype)
             writer.write(frame_main)
 
             # If video max time is reached
@@ -134,9 +144,7 @@ try:
                     with open(filepath, "rb") as f:
                         response = requests.post(
                             ENDPOINT,
-                            data=f,
-                            headers={"Content-Type": "video/mp4"},
-                            stream=True,
+                            files={"file": (filename, f, "video/mp4")},
                         )
                         print("upload status:", response.status_code)
                 except Exception as e:
@@ -150,3 +158,4 @@ finally:
         recording = False
     camera.stop()
     camera.close()
+    print("killed your camera for you, ur welcome")
