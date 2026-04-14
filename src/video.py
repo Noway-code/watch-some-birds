@@ -99,6 +99,7 @@ try:
             cv2.contourArea(c) > MOTION_AREA_THRESHOLD for c in contours
         )
 
+        # BEGIN RECORDING
         if motion_detected and not recording:
             print("motion detected -> start recording")
 
