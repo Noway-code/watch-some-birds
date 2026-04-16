@@ -13,7 +13,7 @@ from dotenv import load_dotenv
 import asyncio
 import aiohttp
 
-CLIP_DURATION = 20
+CLIP_DURATION = 5
 MOTION_AREA_THRESHOLD = 900
 
 OUTPUT_DIR = "out"
@@ -74,10 +74,9 @@ class UploadError(Exception):
     pass
 
 
-async def try_send(filepath):
+async def try_send(filepath, filename):
     ATTEMPTS = 5
     BACKOFF = 3
-    filename = os.path.basename(filepath)
 
     timeout = aiohttp.ClientTimeout(total=15)
     async with aiohttp.ClientSession(timeout=timeout) as session:
@@ -180,7 +179,7 @@ try:
 
                 writer.release()
                 recording = False
-                success = asyncio.run(try_send(filepath))
+                success = asyncio.run(try_send(filepath, filename))
 
                 if not success:
                     print("Upload failed")
