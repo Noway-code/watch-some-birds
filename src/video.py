@@ -10,6 +10,8 @@ import requests
 import os
 import traceback
 from dotenv import load_dotenv
+import asyncio
+import aiohttp
 
 CLIP_DURATION = 20
 MOTION_AREA_THRESHOLD = 900
@@ -18,6 +20,9 @@ OUTPUT_DIR = "out"
 
 load_dotenv()
 ENDPOINT = os.getenv("UPLOAD_ENDPOINT")
+if ENDPOINT is None:
+    print("Failed to retrieve endpoint variable")
+    exit()
 
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
@@ -65,13 +70,51 @@ class Camera:
         self.picam2.close()
 
 
+class UploadError(Exception):
+    pass
+
+
+async def try_send(filepath):
+    ATTEMPTS = 5
+    BACKOFF = 3
+    filename = os.path.basename(filepath)
+
+    timeout = aiohttp.ClientTimeout(total=15)
+    async with aiohttp.ClientSession(timeout=timeout) as session:
+        for attempt in range(1, ATTEMPTS + 1):
+            try:
+                with open(filepath, "rb") as f:
+                    data = aiohttp.FormData()
+                    data.add_field(
+                        "file",
+                        f,
+                        filename=filename,
+                        content_type="video/mp4",
+                    )
+
+                    async with session.post(ENDPOINT, data=data) as resp:
+                        if resp.status == 200:
+                            print(f"upload success: {filename}")
+                            return True
+                        else:
+                            raise UploadError(f"bad status: {resp.status}")
+
+            except Exception as e:
+                print(f"upload failed (attempt {attempt}): {e}")
+
+            delay = BACKOFF * (2 ** (attempt - 1))
+            print(f"retrying in {delay}s...")
+            await asyncio.sleep(delay)
+
+    return False
+
+
 # Initiatlize and Config the Camera
 main_size = (1280, 720)
 main_format = "RGB888"
 lores_size = (640, 360)
 lores_format = "YUV420"
 threshold = 900
-
 camera = Camera(main_size, main_format, lores_size, lores_format)
 camera.start()
 
@@ -128,9 +171,7 @@ try:
             ):
                 break
             frame_main = camera.capture_array("main")
-            # print(frame_main.shape, frame_main.dtype)
             frame_main = cv2.cvtColor(frame_main, cv2.COLOR_RGB2BGR)
-            # print(frame_main.shape, frame_main.dtype)
             writer.write(frame_main)
 
             # If video max time is reached
@@ -139,19 +180,13 @@ try:
 
                 writer.release()
                 recording = False
+                success = asyncio.run(try_send(filepath))
 
-                # SEND FILE
-                try:
-                    with open(filepath, "rb") as f:
-                        response = requests.post(
-                            ENDPOINT,
-                            files={"file": (filename, f, "video/mp4")},
-                        )
-                        print("upload status:", response.status_code)
-                except Exception as e:
-                    print("upload failed:", e)
+                if not success:
+                    print("Upload failed")
+
         frame1 = frame2
-except Exception as e:
+except Exception:
     traceback.print_exc()
 finally:
     if recording is True and writer is not None:
