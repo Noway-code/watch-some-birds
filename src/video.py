@@ -8,6 +8,8 @@ import aiohttp
 from time import perf_counter
 from dotenv import load_dotenv
 from picamera2 import Picamera2
+from picamera2.encoders import H264Encoder
+from picamera2.outputs import FfmpegOutput
 
 # ==============================
 # Config
@@ -47,7 +49,7 @@ class Camera:
     def __init__(self):
         self.picam2 = Picamera2()
         config = self.picam2.create_video_configuration(
-            main={"size": MAIN_SIZE, "format": "RGB888"},
+            main={"size": MAIN_SIZE, "format": "YUV420"},
             lores={"size": LORES_SIZE, "format": "YUV420"},
         )
         self.picam2.configure(config)
@@ -62,10 +64,6 @@ class Camera:
     def get_lores(self):
         frame = self.picam2.capture_array("lores")
         return frame[: LORES_SIZE[1], :]
-
-    def get_main(self):
-        frame = self.picam2.capture_array("main")
-        return cv2.cvtColor(frame, cv2.COLOR_RGB2BGR)
 
 
 # ==============================
@@ -133,12 +131,14 @@ def detect_motion(frame1, frame2) -> bool:
 
 
 class Recorder:
-    def __init__(self):
+    def __init__(self, picam2):
+        self.picam2 = picam2
         self.recording = False
         self.writer = None
         self.start_time = perf_counter()
         self.filepath = None
         self.filename = None
+        self.encoder = H264Encoder(bitrate=10_000_000)
 
     def start(self):
         self.recording = True
@@ -146,29 +146,19 @@ class Recorder:
         self.filename = time.strftime("%Y%m%d_%H%M%S") + ".mp4"
         self.filepath = os.path.join(OUTPUT_DIR, self.filename)
 
-        self.writer = cv2.VideoWriter(
-            self.filepath,
-            cv2.VideoWriter_fourcc(*"mp4v"),
-            20,
-            MAIN_SIZE,
-        )
+        output = FfmpegOutput(self.filepath)
+        self.picam2.start_recording(self.encoder, output)
 
         logger.info(f"Recording started: {self.filename}")
-
-    def write(self, frame):
-        if self.writer:
-            self.writer.write(frame)
 
     def should_stop(self) -> bool:
         return (perf_counter() - self.start_time) >= CLIP_DURATION
 
     def stop(self):
-        if self.writer:
-            self.writer.release()
-
+        self.picam2.stop_recording()
         self.recording = False
-        logger.info(f"Recording finished: {self.filename}")
 
+        logger.info(f"Recording finished: {self.filename}")
         return self.filepath, self.filename
 
 
@@ -179,9 +169,10 @@ class Recorder:
 
 def main():
     camera = Camera()
-    recorder = Recorder()
-
     camera.start()
+
+    recorder = Recorder(camera.picam2)
+
     logger.info("Camera started")
 
     frame1 = camera.get_lores()
@@ -194,9 +185,6 @@ def main():
                 recorder.start()
 
             if recorder.recording:
-                frame = camera.get_main()
-                recorder.write(frame)
-
                 if recorder.should_stop():
                     filepath, filename = recorder.stop()
                     if not filepath or not filename:
